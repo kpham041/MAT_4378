@@ -1,0 +1,35 @@
+---
+title: "Lecture 4 MAT 4378: P_value"
+author: "Michael"
+date: "2022-09-16"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#How to use the bnom.test thingy
+
+```{r}
+# Binominal experiment with n=6
+# H_o: pi = 0.25, H_1 is pi#0.25
+binom.test( x=1, n=6, p=0.1)   #success observed, p is the probablity 
+
+
+```
+
+number of successes = 1  (chance of getting only 1 success in 6 trial)
+number of trials = 6
+p-value = 0.4686
+
+
+
+
+#How to do the 95% Clopper- Pearson  CI for pi 
+```{r}
+qbeta(0.25, 1, 6) 
+qbeta(0.975, 2,5) 
+```
+
